@@ -180,7 +180,7 @@ Key findings from the paper (N=1,944 across 4 models, 3 injection families):
 Contributions welcome. The core scoring engine is intentionally minimal (~140 lines). If you're adding features, consider whether they belong in core or in a pipeline-specific module.
 
 ```bash
-git clone https://github.com/sollucidlabs/kaari.git
+git clone https://github.com/BobcatFeenix/kaari.git
 cd kaari
 pip install -e ".[dev]"
 pytest tests/ -v
@@ -192,4 +192,4 @@ MIT. See [LICENSE](LICENSE).
 
 ---
 
-Built by [Sol Lucid Labs](https://sollucidlabs.com) in Helsinki.
+Built by [Sol Lucid Labs](https://BobcatFeenix.com) in Helsinki.

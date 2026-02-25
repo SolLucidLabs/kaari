@@ -38,9 +38,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/sollucidlabs/kaari"
-Documentation = "https://kaari.dev"
-Repository = "https://github.com/sollucidlabs/kaari"
+Homepage = "https://github.com/BobcatFeenix/kaari"
+Documentation = "https://github.com/BobcatFeenix/kaari"
+Repository = "https://github.com/BobcatFeenix/kaari"
 
 [tool.setuptools.packages.find]
 include = ["kaari*"]
