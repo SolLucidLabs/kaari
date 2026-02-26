@@ -1,7 +1,14 @@
 # Kaari
 
+**Black-box prompt injection detection for AI agent pipelines.**
 **Black-box prompt injection detection via semantic deviation measurement.**
 
+[![Paper](https://img.shields.io/badge/Paper-SSRN%20Preprint-blue)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6280858)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Beta%202026-orange)]()
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue)]()
+
+---
 Kaari scores prompt-response pairs by measuring how far a model's response deviates from the user's original intent in embedding space. No access to model internals needed — works with any LLM.
 
 Based on the Intent Vectoring research (N=1,944, AUC 0.883).
