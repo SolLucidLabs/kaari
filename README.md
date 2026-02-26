@@ -9,9 +9,7 @@
 
 Kaari detects when an AI agent has been redirected from what the user 
 actually asked for. No access to model internals required. Works with 
-any text-in / text-out API.
-
-Built on **Intent Vectoring** — measuring cosine distance between 
+any text-in / text-out API. Built on **Intent Vectoring** — measuring cosine distance between 
 embedded user intent and model response in vector space. If the model 
 went somewhere the user didn't send it, Kaari sees it.
 
