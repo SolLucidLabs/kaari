@@ -1,7 +1,6 @@
 # Kaari
 
-**Black-box prompt injection detection for AI agent pipelines.**
-**Black-box prompt injection detection via semantic deviation measurement.**
+**Black-box prompt injection detection for AI agent pipelines via semantic deviation measurement.**
 
 [![Paper](https://img.shields.io/badge/Paper-SSRN%20Preprint-blue)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6280858)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
