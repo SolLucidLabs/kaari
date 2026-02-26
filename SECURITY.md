@@ -74,7 +74,7 @@ If you use Kaari in research, please cite:
 @article{lertola2026intent,
   title={Intent Vectoring: Black-Box Prompt Injection Detection via Semantic Deviation Measurement},
   author={Lertola, Tatu Samuli},
-  journal={arXiv preprint},
+  journal={SSRN preprint},
   year={2026}
 }
 ```
