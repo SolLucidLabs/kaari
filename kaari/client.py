@@ -1,7 +1,6 @@
 """
 Kaari Client — The public interface.
 =====================================
-This is what users interact with after `pip install kaari`.
 
 Usage:
     import kaari
