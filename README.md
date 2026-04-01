@@ -16,7 +16,7 @@ went somewhere the user didn't send it, Kaari sees it.
 ---
 Kaari scores prompt-response pairs by measuring how far a model's response deviates from the user's original intent in embedding space. No access to model internals needed — works with any LLM.
 
-Based on the Intent Vectoring research (N=1,944, AUC 0.883).
+Based on the Intent Vectoring research (N=2,228, AUC 0.883). Validated across 4 LLM architectures and 3 embedding models — detection is encoder-independent (AUC spread ±0.006).
 
 ## Quick Start
 
@@ -230,7 +230,7 @@ Kaari is a **post-hoc monitoring tool**, not a firewall. It scores responses aft
 Known limitations:
 
 - **Subtle injections** are harder to detect (AUC drops from 0.92 for obvious to 0.67 for file-based)
-- **Single embedding model** validated so far (nomic-embed-text). Other models may need recalibration
+- **Embedding models validated:** nomic-embed-text, all-MiniLM-L6-v2, bge-base-en-v1.5. Detection is encoder-independent (AUC spread ±0.006), but optimal thresholds vary per model — recalibrate for your deployment
 - **Simple test prompts** in research. Long-document and multi-turn scenarios need further validation
 
 See [SECURITY.md](SECURITY.md) for responsible use guidance.
@@ -241,18 +241,19 @@ This implementation is based on:
 
 > Lertola, T.S. (2026). "Intent Vectoring: Black-Box Prompt Injection Detection via Semantic Deviation Measurement." Sol Lucid Labs. *arXiv preprint.*
 
-Key findings from the paper (N=1,944 across 4 models):
+Key findings from the paper (N=2,228 across 4 LLM architectures, 3 embedding models):
 
 - Combined Cohen's d = 1.72 (large effect size)
 - AUC-ROC = 0.870 (Δv2), 0.883 (C2 with length normalization)
-- Cross-model generalization confirmed
+- Cross-model generalization confirmed (4 LLMs, no model systematically weaker)
+- Encoder-independent detection confirmed (AUC spread ±0.006 across 3 embedding models)
 
 ## Contributing
 
 Contributions welcome. The core scoring engine is intentionally minimal (~140 lines). If you're adding features, consider whether they belong in core or in a pipeline-specific module.
 
 ```bash
-git clone https://github.com/BobcatFeenix/kaari.git
+git clone https://github.com/SolLucidLabs/kaari.git
 cd kaari
 pip install -e ".[dev]"
 pytest tests/ -v
@@ -264,4 +265,4 @@ MIT. See [LICENSE](LICENSE).
 
 ---
 
-Built by [Sol Lucid Labs](https://BobcatFeenix.com) in Helsinki.
+Built by [Sol Lucid Labs](https://sollucidlabs.com) in Helsinki.

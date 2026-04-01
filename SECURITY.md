@@ -33,17 +33,15 @@ Kaari is **not a firewall, filter, or safety guarantee**.
 
 2. **Threshold calibration matters.** The default threshold (0.291) is derived from research data with specific models and prompt types. Your deployment may need different thresholds. Consider running calibration on your own data.
 
-3. **Embedding model dependency.** Detection quality depends on the embedding model. Results validated with nomic-embed-text (768-dim). Other models may produce different separation characteristics.
+3. **Embedding model dependency.** Detection quality depends on the embedding model. Validated across 3 embedding models (nomic-embed-text, all-MiniLM-L6-v2, bge-base-en-v1.5) with AUC spread ±0.006, confirming encoder independence. However, optimal thresholds vary per model — recalibrate for your deployment.
 
 4. **Simple prompt bias.** Research used short, single-turn prompts. Performance on long documents, multi-turn conversations, or system prompts with extensive context is not yet validated.
-
-5. **Detection is embedding-model-dependent.** Separation quality varies by embedding model. Results are validated with nomic-embed-text; other models may require recalibration.
 
 ## Reporting Vulnerabilities
 
 If you find a way to consistently bypass Kaari detection, we'd like to know. This helps us improve the tool for everyone.
 
-Contact: tatu.lertola@gmail.com
+Contact: tatu@sollucidlabs.com
 
 Please include:
 - The prompt and injection used
@@ -57,7 +55,7 @@ As of v0.2.0, Kaari achieves:
 
 | Metric | Value | Conditions |
 |--------|-------|------------|
-| AUC-ROC (C2) | 0.883 | N=1,944, 4 models |
+| AUC-ROC (C2) | 0.883 | N=2,228, 4 LLM architectures, 3 embedding models |
 | Cohen's d | 1.72 | Combined effective |
 | Sensitivity | ~0.65 | At Youden-optimal threshold |
 | Specificity | ~0.83 | At Youden-optimal threshold |
