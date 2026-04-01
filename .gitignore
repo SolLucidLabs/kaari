@@ -34,3 +34,5 @@ Thumbs.db
 # Research data (not in repo — too large)
 # The test harness and CSVs stay in intent-vector-test/
 ab_results/
+intent-vector-test/
+kaari-v0.2.1.zip
